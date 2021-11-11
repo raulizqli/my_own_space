@@ -53,6 +53,14 @@ $departaments = array(
 				<div class="col">
 					<form>
 						<fieldset>
+							<div class="row">
+								<div class="col-lg-3 col-6">
+									<img src="imgs/stephanie_logo.png" class="rounded img-fluid" alt="Stephanie Leal"/>
+								</div>
+								<div class="col-lg-2 offset-lg-7 col-4 offset-2">
+									<img src="imgs/pale.png" class="rounded img-fluid" alt="Centro Pale"/>
+								</div>
+							</div>
 							<legend class="text-center">&#191;Soy resiliente&#63;</legend>
 							<div class="mb-3">
 								<label for="employee_no" class="form-label">N&uacutemero de Empleado</label>
