@@ -12,6 +12,7 @@ foreach ( $_POST["responses"] as $key => $value )
 {
 	$statement->bindParam( ":$key", $value );
 }
-$statement->bindParam( ":created_at", date("now") );
+$date = date('Y-m-d H:i:s');
+$statement->bindParam( ":created_at", $date );
 echo json_encode($statement->execute());
 ?>
