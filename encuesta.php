@@ -1,28 +1,28 @@
 <?php $questions = array(
 	"1. Cuando hago planes persisto en ellos.",
 	"2. Normalmente enfrento los problemas de una u otra forma.",
-	"3. Soy capaz de depender de mi mismo más que otros.",
+	"3. Soy capaz de depender de mi mismo m&aacutes que otros.",
 	"4. Mantener el interés en las cosas es importante para mi.",
-	"5. Puedo estar sólo si es necesario.",
+	"5. Puedo estar s&oacutelo si es necesario.",
 	"6. Siento orgullo por haber obtenido cosas en mi vida.",
-	"7. Normalmente consigo las cosas sin mucha preocupación.",
+	"7. Normalmente consigo las cosas sin mucha preocupaci&oacuten.",
 	"8. Me quiero a mi mismo.",
 	"9. Siento que puedo ocuparme de varias cosas al mismo tiempo.",
 	"10. Soy decidido en las cosas que hago en mi vida.",
 	"11. Rara vez pienso sobre por qué suceden las cosas.",
 	"12. Hago las cosas (proyectos, actividades e indicaciones) al momento.",
-	"13. Puedo superar momentos difíciles porque ya he pasado por dificultades anteriores.",
+	"13. Puedo superar momentos dif&iacuteciles porque ya he pasado por dificultades anteriores.",
 	"14. Soy disciplinado en las cosas que hago.",
 	"15. Mantengo el interés en las cosas.",
-	"16. Normalmente puedo encontrar un motivo para reír.",
-	"17. Creer en mí mismo me hace superar momentos difíciles.",
+	"16. Normalmente puedo encontrar un motivo para re&iacuter.",
+	"17. Creer en m&iacute mismo me hace superar momentos dif&iacuteciles.",
 	"18. En una emergencia, las personas pueden contar conmigo.",
-	"19. Normalmente trato de mirar una situación desde distintos puntos de vista.",
+	"19. Normalmente trato de mirar una situaci&oacuten desde distintos puntos de vista.",
 	"20. A veces me obligo a hacer cosas aunque no quiera hacerlas.",
 	"21. Mi vida tiene significado.",
 	"22. No me quedo pensando en las cosas que no puedo cambiar.",
-	"23. Cuando estoy en una situación difícil normalmente encuentro una salida.",
-	"24. Tengo energía suficiente para lo que necesito hacer.",
+	"23. Cuando estoy en una situaci&oacuten dif&iacutecil normalmente encuentro una salida.",
+	"24. Tengo energ&iacutea suficiente para lo que necesito hacer.",
 	"25. Es normal que existan personas a las que no les caigo bien."
 );
 $departaments = array(
@@ -34,7 +34,7 @@ $departaments = array(
 <html lang="en">
 	<head>
 		<!-- Required meta tags -->
-		<meta charset="utf-8">
+		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<!-- Bootstrap CSS -->
 		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
@@ -53,9 +53,9 @@ $departaments = array(
 				<div class="col">
 					<form>
 						<fieldset>
-							<legend class="text-center">¿Soy resiliente?</legend>
+							<legend class="text-center">&#191;Soy resiliente&#63;</legend>
 							<div class="mb-3">
-								<label for="employee_no" class="form-label">Número de Empleado</label>
+								<label for="employee_no" class="form-label">N&uacutemero de Empleado</label>
 								<input type="text" class="form-control" id="employee_no" placeholder="123456">
 							</div>
 							<div class="mb-3">
@@ -103,8 +103,8 @@ $departaments = array(
 							<div id="alert_error" class="position-fixed top-0 start-0" style="width:100%;display:none;z-index:999;">
 								<div class="alert alert-danger alert-dismissible fade show text-center" role="alert">
 									Faltan de Responder <strong><span id="unanswer_questions">0</span></strong> Preguntas
-									<div id="cant_type_employee_no">No se ha Ingresado el <strong>Número de Empleado</strong></div>
-									<div id="cant_select_departament">No se Seleccionó el <strong>Departamento</strong></div>
+									<div id="cant_type_employee_no">No se ha Ingresado el <strong>N&uacutemero de Empleado</strong></div>
+									<div id="cant_select_departament">No se Seleccion&oacute el <strong>Departamento</strong></div>
 									<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
 								</div>
 							</div>
