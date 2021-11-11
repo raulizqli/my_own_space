@@ -62,12 +62,12 @@ $departaments = array(
 								<label class="form-label">Departamento</label>
 								<select id="departament" class="form-select" aria-label="Departamento">
 									<option value="0" selected>Seleccione un Departamento</option>
-									<? foreach ($departaments as $key => $departament): ?>
+									<?php foreach ($departaments as $key => $departament): ?>
 										<option value="<?=$departament?>"><?=$departament?></option>
-									<? endforeach;?>
+									<?php endforeach;?>
 								</select>
 							</div>
-							<? foreach ($questions as $key => $question): ?>
+							<?php foreach ($questions as $key => $question): ?>
 								<div class="mb-3">
 									<label class="form-label"><?=$question?></label>
 									<div class="btn-group form-control" role="group" aria-label="<?=$question?>">
@@ -87,7 +87,7 @@ $departaments = array(
 										<label class="btn btn-outline-primary" for="btnradio_q<?=$key?>_7">7</label>
 									</div>
 								</div>
-							<?endforeach;?>
+							<?php endforeach;?>
 							<div id="progress_container" class="position-fixed top-0 start-0" style="width:100%;display:none;z-index:999;">
 								<div class="progress">
 	  							<div id="progress_responses" class="progress-bar" role="progressbar" style="width:0%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
