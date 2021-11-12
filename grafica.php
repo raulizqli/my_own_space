@@ -9,9 +9,13 @@ $str_sql = "SELECT employee_no, departament, $questionsInd, ($questions) / 25 AS
 $series = array( "Bajo" => array(), "Medio"=>array(), "Medio-Alto"=>array(), "Alto"=>array());
 $tableDet = "";
 $seriesPrincipal = array( "Bajo" => 0, "Medio"=> 0, "Medio-Alto"=> 0, "Alto"=> 0 );
+$employee_prom_general = 0;
+$employee_qty = 0;
 foreach ($dbPdo->query($str_sql) as $row) 
 {
+	$employee_qty += 1;
 	$employee_prom = round($row["employee_prom"], 2);
+	$employee_prom_general += $employee_prom;
 	if ( $employee_prom < 2.59 )
 	{
 		$current = "Bajo";
@@ -104,6 +108,13 @@ $categories = json_encode(array_keys($seriesPrincipal));
 								<tbody>
 									<?=$tableDet?>
 								</tbody>
+								<tfoot>
+									<tr>
+										<th></th>
+										<th style="text-align:right;">Promedio de la Empresa:</th>
+										<th><?=round($employee_prom_general/$employee_qty, 2)?></th>
+									</tr>
+								</tfoot>
 							</table>
 						</div>
 					</div>
