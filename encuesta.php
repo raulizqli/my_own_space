@@ -27,7 +27,9 @@
 );
 $departaments = array(
 	"Compras",
-	"Ventas"
+	"Ventas",
+	"RRHH",
+	"TI"
 );
 ?>
 <!doctype html>

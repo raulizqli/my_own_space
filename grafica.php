@@ -108,86 +108,45 @@ $categories = json_encode(array_keys($seriesPrincipal));
 						</div>
 					</div>
 					<script lang="javascript">
+						var colors = ["#dc3545", "#fd7e14", "#ffc107", "#20c997"];
 						var options = {
-							series: [{
-			          name: 'Coincidencias',
-			          data: <?=$seriesFull?>
-			        }],
-			          chart: {
+          		series: [{
+								name: "Cantidad",
+          			data: <?=$seriesFull?>
+        			}],
+          		chart: {
 			          height: 350,
 			          type: 'bar',
+			          events: {
+			            click: function(chart, w, e) {
+			              // console.log(chart, w, e)
+			            }
+			          }
 			        },
+        			colors: colors,
 			        plotOptions: {
 			          bar: {
-			            borderRadius: 10,
-			            dataLabels: {
-			              position: 'top', // top, center, bottom
-			            },
+			            columnWidth: '45%',
+			            distributed: true,
 			          }
 			        },
 			        dataLabels: {
-			          enabled: true,
-			          formatter: function (val) {
-			            return val;
-			          },
-			          offsetY: -20,
-			          style: {
-			            fontSize: '12px',
-			            colors: ["#304758"]
-			          }
+			          enabled: false
+			        },
+			        legend: {
+			          show: false
 			        },
 			        xaxis: {
 			          categories: <?=$categories?>,
-			          position: 'bottom',
-			          axisBorder: {
-			            show: false
-			          },
-			          axisTicks: {
-			            show: false
-			          },
-			          crosshairs: {
-			            fill: {
-			              type: 'gradient',
-			              gradient: {
-			                colorFrom: '#D8E3F0',
-			                colorTo: '#BED1E6',
-			                stops: [0, 100],
-			                opacityFrom: 0.4,
-			                opacityTo: 0.5,
-			              }
-			            }
-			          },
-			          tooltip: {
-			            enabled: true,
-			          }
-			        },
-			        yaxis: {
-			          axisBorder: {
-			            show: false
-			          },
-			          axisTicks: {
-			            show: false,
-			          },
 			          labels: {
-			            show: false,
-			            formatter: function (val) {
-			              return val + "%";
+			            style: {
+			              fontSize: '12px'
 			            }
-			          }
-			        
-			        },
-			        title: {
-			          text: '',
-			          floating: true,
-			          offsetY: 330,
-			          align: 'center',
-			          style: {
-			            color: '#444'
 			          }
 			        }
-	        };
-	        var chart = new ApexCharts(document.querySelector("#chart_two"), options);
-	        chart.render();
+		        };
+	        	var chart = new ApexCharts(document.querySelector("#chart_two"), options);
+	        	chart.render();
 					var options = {
 		          series: <?=$series?>,
 							chart: {
@@ -218,11 +177,15 @@ $categories = json_encode(array_keys($seriesPrincipal));
 			          },
 			        },
 			        legend: {
+								markers : {
+									fillColors : colors
+								},
 			          position: 'right',
 			          offsetx: 40
 			        },
 			        fill: {
-			          opacitx: 1
+								colors: colors,
+			          opacity: 1
 			        }
         		};
 						var chart = new ApexCharts(document.querySelector("#chart"), options);
